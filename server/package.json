@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simple.js",
+  "scripts": {
+    "start": "echo use run.sh to serve the front-end built with create-react-app scripts",
+    "test": "echo to-do"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "koa": "^2.11.0",
+    "koa-helmet": "^5.2.0",
+    "koa-static": "^5.0.0",
+    "mime": "^2.4.4"
+  },
+  "devDependencies": {
+  }
+}
