@@ -1,4 +1,3 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/martinjackson/intro-react)
 
 # Intro React
 Example of an initial project
@@ -22,3 +21,5 @@ npx create-react-app client
 cd client
 npm start
 ```
+
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/martinjackson/intro-react)
