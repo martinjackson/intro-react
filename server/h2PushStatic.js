@@ -46,8 +46,6 @@ const keysStr = (obj) => {
 function onRequest (req, res) {
   const reqPath = req.url === '/' ? '/index.html' : req.url
   const file = publicFiles.get(reqPath)
-  console.log(` ${reqPath}  ${(file) ? file.filePath : 'Not Found'}    push: ${res.stream.pushAllowed}`);
-
 
   // File not found in list
   if (!file) {
@@ -55,6 +53,8 @@ function onRequest (req, res) {
     // res.end()
     return false
   }
+
+  console.log(` ${reqPath}  ${(file) ? file.filePath : 'Not Found'}    push: ${res.stream.pushAllowed}`);
 
   // serverPush with index.html
   if (reqPath === '/index.html' && res.stream.pushAllowed) {

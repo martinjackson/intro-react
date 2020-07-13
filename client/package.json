@@ -2,12 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "yarn-resolutions-commented-out": {
-    "**/acorn": "^7.1.1",
-    "**/minimist": "^1.2.3",
-    "**/yargs-parser": "^18.1.2",
-    "**/http-proxy": "^1.18.1"
-  },
   "resolutions": {
     "acorn": "^7.1.1",
     "minimist": "^1.2.3",
@@ -25,7 +19,8 @@
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:minified": "react-scripts build",
+    "build": "node build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "rewire": "^5.0.0"
   }
 }

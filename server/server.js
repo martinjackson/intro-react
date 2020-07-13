@@ -17,8 +17,7 @@ const options = {
   };
 
 const server = http2.createSecureServer(options, (req, res) => {
-  const { socket: { alpnProtocol } } = req.httpVersion === "2.0" ? req.stream.session : req;
-  console.log(`http ver: ${req.httpVersion} protocol: ${alpnProtocol}    ${req.url}`)
+  displaySocketInfo(req);
 
   let done = false;
   if (req.httpVersion === "2.0") {
@@ -28,15 +27,18 @@ const server = http2.createSecureServer(options, (req, res) => {
   if (!done) app(req, res);
 });
 
-  server.listen(args.port, (err) => {
+server.listen(args.port, (err) => {
     if (err) {
       console.error(err)
       return
     }
 
-    console.log(`Server listening on ${args.port}`)
+    console.log(`Server listening on ${args.port} serving ${args.home}`)
   })
 
 
-
+function displaySocketInfo(req) {
+  const { socket: { alpnProtocol } } = req.httpVersion === "2.0" ? req.stream.session : req;
+  console.log(`http ver: ${req.httpVersion} protocol: ${alpnProtocol}    ${req.url}`);
+}
 
