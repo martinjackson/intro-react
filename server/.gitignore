@@ -1,3 +1,5 @@
 ssl
 node_modules
 .clinic
+server.log
+server.pid
