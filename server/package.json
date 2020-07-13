@@ -11,11 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "argparse": "^1.0.10",
-    "koa": "^2.11.0",
+    "koa": "^2.13.0",
     "koa-helmet": "^5.2.0",
     "koa-static": "^5.0.0",
-    "mime": "^2.4.4"
+    "mime": "^2.4.6"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
